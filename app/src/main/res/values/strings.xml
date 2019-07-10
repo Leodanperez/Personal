@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Personal</string>
+    <string name="codigo">Codigo</string>
+    <string name="name">Nombres</string>
+    <string name="apellido">Apellidos</string>
+    <string name="dni">Dni</string>
+    <string name="edad">Edad</string>
+    <string name="save">Guardar</string>
+    <string name="search">Buscar</string>
+    <string name="register">registrar</string>
+    <string name="editar">editar</string>
+</resources>
