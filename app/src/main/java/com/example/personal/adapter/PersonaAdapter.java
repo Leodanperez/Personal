@@ -44,10 +44,22 @@ public class PersonaAdapter extends RecyclerView.Adapter<PersonaAdapter.Personal
         holder.lblName.setText(personaM.getNombre());
         holder.lblApellido.setText(personaM.getApellido());
         holder.lblDni.setText(personaM.getDni());
-        holder.lblEdad.setText(String.valueOf(personaM.getEdad()));
+        holder.lblEdad.setText(personaM.getEdad());
+        //holder.lblEdad.setText(personaM.getEdad());
 
         //paso 4: llamamoa a los metodos eliminar actualizar
-        holder.btnEdit.setOnClickListener(new View.OnClickListener() {
+        holder.btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onItemPersonalClick != null)
+                {
+                    onItemPersonalClick.onItemClickDelete(personaM);
+                }
+            }
+        });
+
+        //update
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (onItemPersonalClick != null)
@@ -57,16 +69,8 @@ public class PersonaAdapter extends RecyclerView.Adapter<PersonaAdapter.Personal
             }
         });
 
-        //eliminar
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (onItemPersonalClick != null)
-                {
-                    onItemPersonalClick.onItemClickDelete(personaM);
-                }
-            }
-        });
+        //update
+
     }
 
     @Override
@@ -78,7 +82,7 @@ public class PersonaAdapter extends RecyclerView.Adapter<PersonaAdapter.Personal
     class PersonalViewHolder extends RecyclerView.ViewHolder{
 
         TextView lblName, lblApellido, lblDni, lblEdad;
-        Button btnEdit;
+        Button btnDelete;
 
         public PersonalViewHolder(View itemView) {
             super(itemView);
@@ -86,7 +90,7 @@ public class PersonaAdapter extends RecyclerView.Adapter<PersonaAdapter.Personal
             lblApellido = itemView.findViewById(R.id.lblApellido);
             lblDni = itemView.findViewById(R.id.lblDni);
             lblEdad = itemView.findViewById(R.id.lblEdad);
-            btnEdit = itemView.findViewById(R.id.butonEditar);
+            btnDelete = itemView.findViewById(R.id.butonEliminar);
         }
     }
 

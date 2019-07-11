@@ -65,7 +65,7 @@ public class PersonaDAO {
                 PersonaModel.NAME_FIELD,
                 PersonaModel.APELLIDO_FIELD,
                 PersonaModel.DNI_FIELD,
-                PersonaModel.EDAD_FIELD
+                PersonaModel.EDAD_FIELD,
         };
         openDB();
         Cursor cursor = sqLiteDatabase.query(PersonaModel.TABLE_NAME,column,null,
@@ -84,7 +84,7 @@ public class PersonaDAO {
         persona.setNombre(cursor.getString(1));
         persona.setApellido(cursor.getString(2));
         persona.setDni(cursor.getString(3));
-        persona.setEdad(cursor.getInt(4));
+        persona.setEdad(cursor.getString(4));
         return persona;
     }
 

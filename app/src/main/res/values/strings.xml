@@ -8,5 +8,5 @@
     <string name="save">Guardar</string>
     <string name="search">Buscar</string>
     <string name="register">registrar</string>
-    <string name="editar">editar</string>
+    <string name="delete">delete</string>
 </resources>

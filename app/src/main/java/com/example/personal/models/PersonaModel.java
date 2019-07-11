@@ -16,7 +16,7 @@ public class PersonaModel implements Parcelable {
     private String nombre;
     private String apellido;
     private String dni;
-    private int edad;
+    private String edad;
 
     public PersonaModel(){
     }
@@ -26,7 +26,7 @@ public class PersonaModel implements Parcelable {
         nombre = in.readString();
         apellido = in.readString();
         dni = in.readString();
-        edad = in.readInt();
+        edad = in.readString();
     }
 
     public static final Creator<PersonaModel> CREATOR = new Creator<PersonaModel>() {
@@ -73,11 +73,11 @@ public class PersonaModel implements Parcelable {
         this.dni = dni;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 
@@ -92,6 +92,6 @@ public class PersonaModel implements Parcelable {
         dest.writeString(nombre);
         dest.writeString(apellido);
         dest.writeString(dni);
-        dest.writeInt(edad);
+        dest.writeString(edad);
     }
 }

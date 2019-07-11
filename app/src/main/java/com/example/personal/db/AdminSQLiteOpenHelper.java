@@ -16,7 +16,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
             PersonaModel.NAME_FIELD+" text not null, "+
             PersonaModel.APELLIDO_FIELD+" text not null, "+
             PersonaModel.DNI_FIELD+" text not null, "+
-            PersonaModel.EDAD_FIELD+" int not null )";
+            PersonaModel.EDAD_FIELD+" text not null )";
 
 
     public AdminSQLiteOpenHelper(Context context) {

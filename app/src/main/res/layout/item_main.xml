@@ -40,12 +40,14 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/butonEditar"
-        android:text="@string/editar"
+        android:drawableStart="@drawable/ic_delete"
+        android:id="@+id/butonEliminar"
+        android:text="@string/delete"
         android:layout_weight="1"
+        android:textSize="12sp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
-        android:background="@drawable/border_buton"/>
+        android:background="@drawable/buton_delete"/>
 
 </LinearLayout>

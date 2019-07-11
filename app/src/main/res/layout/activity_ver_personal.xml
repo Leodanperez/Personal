@@ -16,7 +16,7 @@
         android:textColor="@android:color/white"
         android:layout_margin="8dp"
         android:onClick="irRegistroPersona"
-        android:background="@drawable/border_buton"
+        android:background="@drawable/buton_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -49,14 +49,14 @@ public class MainActivity extends AppCompatActivity {
             txtNombre.setText(personaModel.getNombre());
             txtApellido.setText(personaModel.getApellido());
             txtDni.setText(personaModel.getDni());
-            txtEdad.setText(String.valueOf(personaModel.getEdad()));
+            txtEdad.setText(personaModel.getEdad());
             btnAction.setText("ACTUALIZAR PERSONA");
             esActualizable = true;
         }
         else
         {
             btnAction.setText("REGISTRAR PERSONA");
-            Toast.makeText(this, "Aki esta el error "+btnAction, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Aki esta el error "+btnAction, Toast.LENGTH_SHORT).show();
         }
 
         btnAction.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             String nombreL = txtNombre.getText().toString();
             String apellidoL = txtApellido.getText().toString();
             String dniL = txtDni.getText().toString();
-            Integer edadL = Integer.parseInt(txtDni.getText().toString());
+            String edadL = txtEdad.getText().toString();
 
             personaDAO = new PersonaDAO(this);
             PersonaModel personaModel = new PersonaModel();
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             String nombreL = txtNombre.getText().toString();
             String apellidoL = txtApellido.getText().toString();
             String dniL = txtDni.getText().toString();
-            int edadL = Integer.parseInt(txtDni.getText().toString());
+            String edadL = txtEdad.getText().toString();
 
             personaDAO = new PersonaDAO(this);
             PersonaModel personaModel = new PersonaModel();
