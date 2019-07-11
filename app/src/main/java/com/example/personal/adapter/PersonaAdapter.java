@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.personal.R;
@@ -32,16 +31,15 @@ public class PersonaAdapter extends RecyclerView.Adapter<PersonaAdapter.Personal
         notifyDataSetChanged();
     }
 
-    @NonNull
     @Override
-    public PersonaAdapter.PersonalViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public PersonaAdapter.PersonalViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_main,parent
         ,false);
         return new PersonalViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PersonalViewHolder holder, int position) {
+    public void onBindViewHolder(PersonalViewHolder holder, int position) {
         final PersonaModel personaM = listaRecogida.get(position);
         holder.lblName.setText(personaM.getNombre());
         holder.lblApellido.setText(personaM.getApellido());
@@ -82,13 +80,13 @@ public class PersonaAdapter extends RecyclerView.Adapter<PersonaAdapter.Personal
         TextView lblName, lblApellido, lblDni, lblEdad;
         Button btnEdit;
 
-        public PersonalViewHolder(@NonNull View itemView) {
+        public PersonalViewHolder(View itemView) {
             super(itemView);
             lblName = itemView.findViewById(R.id.lblNombre);
             lblApellido = itemView.findViewById(R.id.lblApellido);
             lblDni = itemView.findViewById(R.id.lblDni);
             lblEdad = itemView.findViewById(R.id.lblEdad);
-            btnEdit = itemView.findViewById(R.id.btnEditar);
+            btnEdit = itemView.findViewById(R.id.butonEditar);
         }
     }
 

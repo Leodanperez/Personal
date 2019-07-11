@@ -40,7 +40,7 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/btnEditar"
+        android:id="@+id/butonEditar"
         android:text="@string/editar"
         android:layout_weight="1"
         android:layout_width="0dp"

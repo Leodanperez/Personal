@@ -28,7 +28,19 @@ public class VerPersonal extends AppCompatActivity implements onItemPersonalClic
         setContentView(R.layout.activity_ver_personal);
 
         listPersona = findViewById(R.id.listPersonal);
+
         personaDAO = new PersonaDAO(this);
+
+        /*for(int i=1;i<=10;i++){
+            PersonaModel proM = new PersonaModel();
+            proM.setCodigo(i);
+            proM.setNombre("Leo "+i);
+            proM.setApellido("Perez "+i);
+            proM.setDni("76957680 "+i);
+            proM.setEdad(20);
+            personaDAO.registerPersona(proM);
+        }*/
+
         personaAdapter = new PersonaAdapter(this);
         listPersona.setLayoutManager(new LinearLayoutManager(this));
         listPersona.setAdapter(personaAdapter);

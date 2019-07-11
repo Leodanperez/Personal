@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText txtCodigo,txtNombre,txtApellido,txtDni,txtEdad;
     //ListView lista;
-    //Button btnAction;
+    Button btnAction;
 
     PersonaDAO personaDAO;
     private boolean esActualizable = false;
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         txtEdad = findViewById(R.id.txt_edad);
 
         //lista = findViewById(R.id.listPersonal);
-        Button btnAction = (Button) findViewById(R.id.btnEditar);
+         btnAction = findViewById(R.id.btn_guardar);
 
         PersonaModel personaModel = getIntent().getParcelableExtra("persona");
         if (personaModel != null)
@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         else
         {
             btnAction.setText("REGISTRAR PERSONA");
+            Toast.makeText(this, "Aki esta el error "+btnAction, Toast.LENGTH_SHORT).show();
         }
 
         btnAction.setOnClickListener(new View.OnClickListener() {
